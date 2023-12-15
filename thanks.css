@@ -230,78 +230,131 @@ animation: fade-in 4s linear forwards;
     border-radius: 40% 60% 65% 35% / 40% 35% 65% 60%;
   }
 }
-#music{
-  background: transparent;
+
+
+
+.container{
+  background: rgba(107, 135, 154, 0.37);
   backdrop-filter: blur(10px);
-  width: 18vw;
-  height: 20vh;
-  color: #141619;
   border-radius: 15px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  transition: all 0.3s ease-in-out;
-}
-#music:hover{
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);  
-  scale: 1.04 ;
-  background-image: linear-gradient(45deg, rgba(48, 160, 200, 0.36) 0%, rgba(48, 160, 200, 0.36) 27%,rgba(66, 208, 212, 0.36) 27%, rgba(66, 208, 212, 0.36) 30%,rgba(57, 184, 206, 0.36) 30%, rgba(57, 184, 206, 0.36) 38%,rgba(75, 232, 218, 0.36) 38%, rgba(75, 232, 218, 0.36) 41%,rgba(38, 135, 193, 0.36) 41%, rgba(38, 135, 193, 0.36) 67%,rgba(29, 111, 187, 0.36) 67%, rgba(29, 111, 187, 0.36) 68%,rgba(20, 87, 181, 0.36) 68%, rgba(20, 87, 181, 0.36) 71%,rgba(11, 63, 175, 0.36) 71%, rgba(11, 63, 175, 0.36) 100%),linear-gradient(45deg, rgba(120, 161, 172, 0.37) 0%, rgba(120, 161, 172, 0.37) 12.5%,rgba(83, 81, 120, 0.37) 12.5%, rgba(83, 81, 120, 0.37) 25%,rgba(132, 188, 189, 0.37) 25%, rgba(132, 188, 189, 0.37) 37.5%,rgba(95, 108, 137, 0.37) 37.5%, rgba(95, 108, 137, 0.37) 50%,rgba(144, 215, 206, 0.37) 50%, rgba(144, 215, 206, 0.37) 62.5%,rgba(107, 135, 154, 0.37) 62.5%, rgba(107, 135, 154, 0.37) 75%,rgba(156, 242, 223, 0.37) 75%, rgba(156, 242, 223, 0.37) 87.5%,rgba(71, 54, 103, 0.37) 87.5%, rgba(71, 54, 103, 0.37) 100%),linear-gradient(63deg, rgb(156, 214, 233),rgb(74, 10, 132));
-}
-.wrapper{
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  max-width: fit-content;
-  max-height: fit-content;
-  margin: auto;
-}
-.wrapper .icon{
-  padding: 15px;
-  width: 3px;
-  height: 2px;
-  transition: all 0.2s ease;
-}
-.wrapper .tooltip{
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  top: -10px;
-  padding: 5px 8px;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-.wrapper .tooltip::before{
-  position: relative;
-  content: "";
-  height: 8px;
-  width: 8px;
-  background-color: #ffffff;
-  bottom: -5px;
-  left: 50%;
-  transform: translate(-40%)
-  rotate(45deg);
-  transition: all 0.3s ease;
-}
-.wrapper .icon:hover .tooltip{
-  display: flex;
-  flex-direction: row;
-  top: -20px;
-  opacity: 3;
-  visibility: visible;
-  pointer-events: auto;
-}
-.wrapper .icon:hover .tooltip::before{
-  transform: translate(-50%) rotate(0);
-  bottom: -8px;
-}
-
-
-fieldset{
-  border-radius: 25px;
   border: none;
   padding: 20px;
+  align-items: baseline;
+  justify-content: space-around;
+  font-family: 'Times New Roman', Times, serif;
+  font: 'Times New Roman';
+  display: flex;
+}
+.text-box {
+  margin-left: 44vw;
+ margin-top: 42vh;
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: absolute;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+fieldset{
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  background-color: #6d7b74;
+  margin-bottom: 20px;
+  width: 23vh;
+  height: 20vw;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
+  scroll-margin: 10px;
+}
+
+.music{
   align-items: center;
-  justify-content: center;
+  justify-content: baseline;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4%;
+  border-radius: 25px;
+  background: transparent;
+  color: #fff;
+}
+
+.musci-app{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  filter: contrast(8px);
+  border: none;
+  border-radius: 25px;
+  height: 25vh;
+  width: 18vw;
+  margin-top: 2%;
+  transition: all 0.3s ease-in-out;
+}
+.musci-app:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);  
+  scale: 1.04 ;
+  background: rgb(64, 214, 194);
 }
 
