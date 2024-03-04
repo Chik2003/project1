@@ -1,0 +1,126 @@
+body{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(249,232,51,1) 0%, rgba(250,196,59,1) 100.2% );
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+
+    --sb-track-color: #191810;
+    --sb-thumb-color: #fddc30;
+    --sb-size: 17px;
+  }
+  
+  body::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 19px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 19px;
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  
+
+
+.rubik-.product-.about {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+}
+
+fieldset{
+    color: black;
+    font-family: "Rubik", sans-serif;
+    border: none;
+    border-radius: 10px;
+    font: Segoe UI;
+    margin: 10px;
+    padding: 10px;
+    opacity: 1;
+}
+
+#nav{
+    justify-content: center;
+    border: 8px solid white;
+    border-radius: 25px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    font-weight: 700;
+    width: 90%;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: black;
+}
+
+#nav a{
+  text-decoration: none;
+  color: white;
+}
+.about{
+    background-image: url(Naruto.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: auto;
+    text-align: left;
+    color: #fff;
+    justify-content: space-around;
+    line-height: 24px;
+    position: relative;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family:"Rubik", sans-serif ;
+}
+
+.product{
+    margin-top: 10vh;
+    border-radius: 25px;
+    background: url(random.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: auto;
+    color: orange;
+    text-align: justify;
+    font-family: "Rubik", sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+#products{
+    justify-content: left;
+    margin-left: 20vh;
+    font-family: "Rubik", sans-serif;
+    font-weight: 800;
+}
+
+.category{
+    background: url(Portrait.jpg) no-repeat;
+    color: #fff;
+    padding-left: 5%;
+    
+    backdrop-filter: blur(3px);
+    display: inline-block;
+    border-radius: 30px;
+    margin-top: 10vh;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+    background-size: cover;
+}

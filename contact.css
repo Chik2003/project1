@@ -1,0 +1,160 @@
+body{
+    background-image: radial-gradient( circle 763px at 18.3% 24.1%,  rgba(255,249,137,1) 7.4%, rgba(226,183,40,1) 58.3% );
+    align-items: center;
+    background-size: cover;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+      
+
+    --sb-track-color: #242926;
+    --sb-thumb-color: #d0a10d;
+    --sb-size: 15px;
+  }
+  
+  body::-webkit-scrollbar {
+    width: var(--sb-size)
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 18px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 18px;
+    
+  }
+  
+  
+
+  .rubik {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+fieldset{
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font: Segoe UI;
+    margin: 10px;
+    padding: 10px;
+    opacity: 1;
+}
+
+#nav{
+    justify-content: center;
+    border: 8px solid white;
+    border-radius: 15px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    align-items: center;
+    font-weight: 700;
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    font-size: 2rem;
+}
+
+#nav a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.side-blob{
+    position: relative;
+    justify-content: left;
+    margin-right: 50rem;
+}
+.blob{
+    position: relative;
+    background: url(luffy.png);
+    background-size: cover;
+    border-radius: 40% 60% 65% 35%/ 40% 35% 65% 60%;
+    height: 200px;
+    width: 200px;
+    animation: shaping 4s infinite;
+}
+
+.blob2{
+    margin-left: 50rem;
+    background: url(GOKU.jpg);
+    background-size: cover;
+    border-radius: 40% 60% 65% 35%/ 40% 35% 65% 60%;
+    height: 200px;
+    width: 200px;
+    animation: shaping 4s infinite;
+}
+@keyframes shaping {
+    0%{
+        border-radius: 40% 60% 65% 35% / 40% 35% 65% 60%;
+    }
+    50%{
+        border-radius: 70% 30% 50% 50% / 65% 35% 65% 35%;
+        }
+
+    100%{
+        border-radius: 40% 60% 65% 35% / 40% 35% 65% 60%;
+    }
+}
+
+.form-container{
+    width: 40rem;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+    align-items: center;
+    background: transparent;
+    box-shadow: none;
+    border: 5px  solid #fff;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    justify-content: left;
+    display: flex;
+    font-family: "Rubik", sans-serif;
+    font-size:1rem;
+    font-weight: 800;
+    flex-direction: column;
+}
+
+.form-container input, textarea{
+    background: transparent;
+    color: white;
+    font-family: 'Raleway',
+    sans-serif;
+    margin: 8px auto;
+    padding: 12px;
+    border: 5px solid  #fff;
+    border-radius: 30px;
+    width: 80%;
+}
+
+.form-container button{
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 4px solid #fff ;
+    width: 30vh;
+    height: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    margin: 4px;
+    color: white;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    margin-left: 5rem;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" role="x-image/icon" href="home.ico">
+    <link rel="stylesheet" href="home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <fieldset>
+            <h1>This Is The Home Page</h1>
+        </fieldset>
+        <ul id="nav">
+            <li>
+                <a href="home.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                Home</a>
+            </li>
+            <li><a href="about.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg> about</a></li>
+            <li>
+                <a href="contact.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    contact</a>
+            </li>
+        </ul>
+    </header>
+    <div class="slides-container">
+        <div class="slide" data-slide>
+            <img src="DBZ1.jpg">
+        </div>
+        <div class="slide" data-slide>
+            <img src="luffy1.jpg" alt="luffy">
+        </div>
+<div class="btn">
+        <button class="btn previous" data-button="previous">
+            <span class="fi fi-sr-angle-left">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="24" height="24"><path d="M17.17,24a1,1,0,0,1-.71-.29L8.29,15.54a5,5,0,0,1,0-7.08L16.46.29a1,1,0,1,1,1.42,1.42L9.71,9.88a3,3,0,0,0,0,4.24l8.17,8.17a1,1,0,0,1,0,1.42A1,1,0,0,1,17.17,24Z"/>
+                </svg>
+            </span>
+</button>
+
+<button class="btn next" data-button="next">
+            <span class="fas_fa-chevron-circle-right"><svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="24" height="24"><path d="M7,24a1,1,0,0,1-.71-.29,1,1,0,0,1,0-1.42l8.17-8.17a3,3,0,0,0,0-4.24L6.29,1.71A1,1,0,0,1,7.71.29l8.17,8.17a5,5,0,0,1,0,7.08L7.71,23.71A1,1,0,0,1,7,24Z"/></svg>
+            </span>
+        </button>
+        </div>
+    </div>
+    <div class="container1">
+        <img src="GOjo.jpg" alt="Gojo Sataro" height="600" width="auto">
+        
+            
+        <p><strong>Gojo Sataro</strong>. he is a Character from one of the most Famous Web Series whose name is Jujutsu Kaisen. He has Infinity Domain Curse Power which makes him so powerful and charistmatic Guy in whole anime series but the has one the most Powerful in the series Whose name is <Strong>Sukuna</Strong></p>
+    
+    </div>
+    <div class="container2">
+        <img src="Batman.jpg" alt="Batman" height="600" width="auto">
+        <p>A Batman is a DC character which is very confident and powerful hero without power but his confidence and will to figth with bad Enemies is so Strong. He also had a very dangerous and Egoistic Villain named <strong>"JOKER"</strong>He is so Egoistic and so mad. he thinks he is very powerful and batman always Stand For his World against joker.</p>        
+    </div>
+    <div class="container3">
+        <img src="tanjiro.jpg" alt="tanjiro" height="600" width="auto">
+        <p><strong>Kamodo Tanjiro</strong> He is a Character of very famous ongoing Japanese Anime Series named <strong>Demon Slayer</strong>. He Has so tough journey his whole family is dead and his only Sister but she becomes Demon her name is Nazuko. he wants to cure his Sister but his journey Started as a demon hunter and he Train very hard and learn Water breathing Skill after that he doesn't Stop he train more Hard and Learn <strong>FIRE BREATHING</strong></p>
+
+    </div>
+</body>
+    <script>
+        const slides = document.querySelectorAll("[data-slide]");
+const button = document.querySelectorAll("[data-button]");
+
+let currslide = 0;
+let maxslide = slides.length-1;
+
+const updateCarousel = (number = 0) => {
+    slides.forEach((slide, index)=> {
+        slide.style.transform = 'translateX(${(index - number) * 120}%)';
+    });
+};
+
+buttons.forEach((button) => {
+    button.addEventListener('click', ()=>{
+        button.dataset.button == "next" ? currslide++ : currslide-- ;
+        
+        if(currslide < maxslide) {
+            currslide = 0;
+        } else if(currslide > 0){
+            currslide = maxslide;
+        }
+
+        updateCarousel(currslide);
+    });
+});
+    </script>
+<script src="home.js"></script>
+</html>

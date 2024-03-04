@@ -1,0 +1,141 @@
+body{
+    background-image: url(Naruto.jpg);
+    background-size: cover;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#heading{
+    font: Segoe UI;
+    margin-right: 55rem;
+    color: #fff;
+    padding-bottom: 5px;
+    width: fit-content;
+    padding-top: 10px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    font-size: 3rem;
+}
+
+
+.form_wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 30px;
+    border: 2px solid #fff;
+    padding: 70px;
+    width: 450px;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    backdrop-filter: blur(10px);
+}
+
+.form_wrapper h2{
+    color: #fff;
+    font-size: 2rem;
+}
+
+.form_wrapper form{
+    margin: 25px 0 65px;
+}
+
+form .form-control{
+    height: 50px;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.form-control input{
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: solid #fff 2px;
+    border-radius: 30px;
+    outline: none;
+    color: #444;
+    font-size: 1rem;
+    padding: 0 15px;
+}
+
+.form-control input:is(:focus, :valid) {
+    background: #fff;
+    padding: 16px 20px 0;
+}
+
+.form-control label{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+    color: #8c8c8c;
+    transition: all 0.1s ease;
+}
+
+.form-control input:is(:focus, :valid) ~ label{
+    font-size: 0.75rem;
+    transform: translateY(-100%);
+}
+form .remember-me{
+    display: flex;
+    cursor: pointer;
+}
+
+form .remember-me input{
+    margin-right: 5px;
+    accent-color: #b3b3b3;
+}
+
+.submit {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 25px;
+    width:  80%;
+    height: 40px;
+    border: #fff solid 3px;
+    align-items: center;
+    text-align: center;
+    transition: all ease-in-out 2s;
+    cursor: pointer;
+}
+
+.submit a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.submit a:hover{
+    text-decoration: none;
+    color: #fff;
+    scale: 1.0;
+    box-shadow: rgb(0 , 0, 0.1);
+}
+
+
+.reset{
+    background: transparent;
+    backdrop-filter: blur(10px);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    width: 80%;
+    height: 40px;
+    border: #fff solid 3px;
+    margin-top: 1rem;
+    color: #fff;
+    transition: all ease-in-out 2s;
+    cursor: pointer;
+}
+
+.reset:hover{
+    scale: 1.0;
+    box-shadow: rgb(0 , 0, 0.1);
+}
